@@ -2,7 +2,7 @@ const skills: Array<string> = [
   'HTML', 'CSS', 'JavaScript', 'Node.js', 'Deno', 'TypeScript',
   'CoffeeScript', 'Sass', 'Elixir', 'Go', 'Rust', 'Vue', 'Vite', 'Nuxt',
   'JWT', 'Webpack', 'esbuild', 'MongoDB', 'PostgreSQL', 'Sqlite', 'Git',
-  'Docker'
+  'Docker.'
 ]
 
 function AddAbout(): void {
