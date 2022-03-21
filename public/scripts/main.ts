@@ -17,6 +17,7 @@ await (async function main(): Promise<void> {
     // @ts-ignore
     fadeUp['style']['-webkit-animation-play-state'] = 'running'
   }
+
 })()
 
 export {}
