@@ -47,8 +47,6 @@ async function AddProjects(): Promise<void> {
   for (let i = 0; (i < size && i < 10); i++) {
     const project = projects[i]
 
-    if (project.stargazers_count < 5) continue
-
     element.innerHTML += `
       <div class="animated animatedFadeInUp fadeInUp container">
         <a href="${project.html_url}">
