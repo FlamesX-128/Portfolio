@@ -118,7 +118,7 @@ div#main-container
 
   grid-area: main-container
 
-  grid-template-areas: "header" "main"
+  grid-template-areas: "header" "main" "footer"
   grid-template-columns: 100%
   grid-template-rows: 130px auto
 
@@ -139,6 +139,14 @@ div#main-container
 
     @import components/about
     @import components/projects
+
+  footer
+    align-self: center
+    cursor: default
+    display: grid
+
+    grid-area: footer
+    text-align: center
 
 @media screen and (min-width: 626px)
   div#main-container
