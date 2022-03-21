@@ -10,7 +10,7 @@ import (
 
 func main() {
 	if err := godotenv.Load(); err != nil {
-		log.Panicln(err.Error())
+		log.Println(err.Error())
 
 	}
 
