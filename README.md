@@ -16,4 +16,4 @@ $ tsc && sass .:. && go run src/main.go
 Go to port 8080.
 
 ## **LICENSE**
-[MIT]()
+[MIT](https://choosealicense.com/licenses/mit/)
