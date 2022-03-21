@@ -1,0 +1,38 @@
+header
+  display: grid
+
+  grid-area: header
+  grid-template-columns: 100%
+  grid-template-rows: 100%
+
+  div
+    align-items: center
+
+    display: grid
+
+    grid-template-areas: "header-image" "header-title"
+    grid-template-columns: 100%
+
+    row-gap: $tertiary-padding
+
+    img
+      border-radius: 50%
+      grid-area: header-image
+
+      margin-left: auto
+      margin-right: auto
+
+      height: 80px
+      width: 80px
+    
+    h1
+      grid-area: header-title
+
+@media screen and (min-width: 769px)
+  header div
+    grid-template-areas: "header-image header-title"
+    grid-template-columns: 80px auto
+
+    column-gap: $tertiary-padding
+
+    justify-content: center

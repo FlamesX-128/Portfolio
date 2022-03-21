@@ -1,0 +1,82 @@
+div#projects-section
+  display: grid
+
+  grid-area: projects-section
+
+  grid-template-areas: "projects-header" "projects-container"
+  grid-template-columns: 100%
+  grid-template-rows: auto auto
+
+  row-gap: $secondary-padding
+
+  div#projects-header
+    grid-area: projects-header
+
+  div#projects-container
+    display: grid
+
+    grid-area: projects-container
+
+    grid-template-columns: 100%
+    grid-template-rows: auto
+
+    row-gap: $secondary-padding
+
+    div.container, a[href]
+      display: grid
+
+      grid-template-columns: 100%
+      grid-auto-rows: auto
+
+      row-gap: $tertiary-padding
+    
+    div.container
+      grid-template-areas: "project-ref"
+    
+    a[href]
+      grid-area: project-ref
+
+      grid-template-areas: "about-project" "project-stats"
+
+    a[href] div.about-project
+      display: grid
+
+      grid-area: about-project
+      grid-template-areas: "project-title" "project-desc"
+      row-gap: $tertiary-padding
+
+      h3
+        grid-area: project-title
+      
+      p
+        grid-area: project-desc
+    
+    a[href] div.project-stats
+      display: grid
+
+      grid-area: project-stats
+      grid-template-columns: calc( 100% - 100px ) 50px 50px
+      grid-template-rows: 25px
+
+      div.project-stat
+        display: grid
+
+        grid-template-areas: "stat-icon stat-txt"
+        grid-template-columns: 24px auto
+        grid-template-rows: 100%
+
+        align-items: center
+
+        i
+          text-align: center
+          grid-area: stat-icon
+
+        p
+          grid-area: stat-txt
+
+@media screen and (min-width: 1000px)
+  div#projects-section
+    row-gap: $primary-padding
+
+    div#projects-container
+      row-gap: $primary-padding

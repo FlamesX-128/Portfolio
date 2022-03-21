@@ -1,0 +1,159 @@
+@import normalize
+@import variables
+@import animations
+
+::-webkit-scrollbar
+  width: 10px
+
+@media (prefers-color-scheme: light)
+  body
+    background: $primary-background
+
+@media (prefers-color-scheme: light)
+  body, a[href]
+    color: $primary-text-color
+
+  ::-webkit-scrollbar-track 
+    background: #C4C4C4
+
+  ::-webkit-scrollbar-thumb
+    background: #A4A4A4
+
+  ::-webkit-scrollbar-thumb:hover
+    background: #848484
+
+@media (prefers-color-scheme: light)
+  .container
+    background: $secondary-background
+    border-radius: $primary-border-radius
+    box-shadow: 1px 1px 1px 1px #{$primary-text-color}22
+
+    padding: $secondary-padding
+
+
+@media (prefers-color-scheme: dark)
+  body
+    background: $primary-background-dark
+
+@media (prefers-color-scheme: dark)
+  body, a[href]
+    color: $primary-text-color-dark
+
+  ::-webkit-scrollbar-track 
+    background: #242424
+
+  ::-webkit-scrollbar-thumb
+    background: #343434
+
+  ::-webkit-scrollbar-thumb:hover
+    background: #444444
+
+@media (prefers-color-scheme: dark)
+  .container
+    background: $secondary-background-dark
+    border-radius: $primary-border-radius
+    box-shadow: 1px 1px 4px 1px #{$primary-text-color}44
+
+    padding: $secondary-padding
+  
+a[href], h1, h2, h3, p
+  font-family: 'Manrope', sans-serif
+
+  margin: 0px
+  padding: 0px
+
+p
+  line-height: 25px
+
+a[href]
+  text-decoration: none
+
+h1, h2
+  text-align: center
+
+h1
+  font-size: 18px
+
+h2
+  font-size: 17px
+
+h3
+  font-size: 16px
+
+@media screen and (min-width: 626px)
+  h1
+    font-size: 30px
+
+  h2
+    font-size: 24px
+
+  h3
+    font-size: 20px
+
+
+div#grid-container
+  display: grid
+
+  grid-template-areas: "main-container"
+  grid-template-columns: 100%
+  grid-template-rows: auto
+
+  justify-content: center
+
+  padding: $secondary-padding
+
+@media screen and (min-width: 769px)
+  div#grid-container
+    grid-template-columns: 80%
+
+
+@media screen and (min-width: 1000px)
+  div#grid-container
+    grid-template-columns: 60%
+
+    padding: $primary-padding
+
+div#main-container
+  display: grid
+
+  grid-area: main-container
+
+  grid-template-areas: "header" "main"
+  grid-template-columns: 100%
+  grid-template-rows: 130px auto
+
+  row-gap: $secondary-padding
+
+  @import components/header
+
+  main
+    display: grid
+
+    grid-area: main
+
+    grid-template-areas: "about-section" "projects-section"
+    grid-template-columns: 100%
+    grid-template-rows: auto auto
+
+    row-gap: $secondary-padding
+
+    @import components/about
+    @import components/projects
+
+@media screen and (min-width: 626px)
+  div#main-container
+    grid-template-rows: 140px
+
+  div#main-container main
+    grid-template-areas: "about-section projects-section"
+    grid-template-columns: 40% calc( 60% - $secondary-padding )
+
+    column-gap: $secondary-padding
+
+@media screen and (min-width: 1000px)
+  div#main-container
+    row-gap: $primary-padding
+
+  div#main-container main
+    column-gap: $primary-padding
+    grid-template-columns: 40% calc( 60% - $primary-padding )

@@ -1,0 +1,49 @@
+div#about-section
+  display: grid
+
+  grid-area: about-section
+
+  grid-template-columns: 100%
+  grid-template-rows: auto
+
+  row-gap: $secondary-padding
+
+  div.container
+    display: grid
+
+    grid-template-areas: "as-title" "as-content"
+    grid-auto-columns: 100%
+    grid-template-rows: auto
+
+    row-gap: $secondary-padding
+
+    h2
+      grid-area: as-title
+
+    div, p
+      grid-area: as-content
+
+    div
+      display: grid
+
+      grid-template-columns: 50px 50px 50px
+      grid-template-rows: 50px
+
+      align-items: center
+
+      column-gap: $secondary-padding
+
+    div a[href]  
+      padding-left: $tertiary-padding
+      padding-right: $tertiary-padding
+
+@media screen and (min-width: 626px)
+  div#about-section
+    display: block
+
+  div#about-section div.container
+    margin-bottom: $secondary-padding
+
+@media screen and (min-width: 1000px)
+  div#about-section div.container
+    margin-bottom: $primary-padding
